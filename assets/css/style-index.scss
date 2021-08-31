@@ -1,0 +1,120 @@
+@media (max-width: 500px) {
+
+    //@import url('./_variables.scss');
+    
+    
+    * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        font-family : 'Roboto', sans-serif;
+    }
+    
+    body {
+    background-color: #00c193;
+    position: relative;
+    overflow: hidden;
+    
+   
+    }
+
+
+    #logo {
+    
+        width: 50%;
+        height: auto;
+        margin-left: 8vw;
+        margin-top: 3vh;
+        display: block;
+        
+    }
+    
+    
+    #create_account {
+    
+        text-decoration: none;
+        color: white;
+        display: block;
+        margin-top: 68vh;
+        margin-left: 32vw;
+
+    }
+
+   
+    #disc {
+
+        width: 112%;
+        height: auto;
+        position: absolute;
+        transform: translateX(-6vw);
+        margin-top: 8vh;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    #arm {
+
+        margin-left: 60vw;
+        margin-top: -18vh;
+        width: 32%;
+        height: auto;
+        position: absolute;
+        z-index: 100;
+    }
+
+
+    #signIn {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #b9b9b9;
+        padding: 3em 3em;
+        background-color: #5f24ed;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        position: absolute;
+        z-index: 10;
+        margin-top: 24.2vh;
+        margin-left: 29.4vw;;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1em;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+    
+}

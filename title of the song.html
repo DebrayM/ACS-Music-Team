@@ -10,22 +10,22 @@
 <body>
     <div id="container">
         <img class="album" src="https://rocknfool.net/wp-content/uploads/2017/01/Diamond-Dogs-1024x585.jpg">
-    <div id="form">
-        <h2> Title of the song</h2>
-        <p class="name">Album</p>
-        <label for="file" class="file"></label>
-        <progress id="file" max="100" value="40"></progress>
-
-        
-        <nav>
-            <ul>
-                <li>home</li>
-                <li>music</li>
-                <li>heart</li>
-                <li>eye</li>
-            </ul>
-        </nav>
-    </div>
+        <div id="form">
+            <h2> Title of the song</h2>
+            <p class="name">Album</p>
+            <!-- création 'ID' pour definir la longueur du fichier -->
+            <div id="audio-player">
+                <span id="current-time" class="time">0:00</span!> <!--début et fin de lecture piste--> 
+                <input type="range" id="seek-slider" max="100" value="0">
+                <span id="duration" class="time">0:00</span>
+                <div id="button">
+                    <button class="play"type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00C193" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></button>
+                    <button class="next" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00C193" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-fast-forward"><polygon points="13 19 22 12 13 5 13 19"></polygon><polygon points="2 19 11 12 2 5 2 19"></polygon></svg></button>
+                    <button class="random" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00C193" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></button>
+                </div>
+            </div>
+            <nav></nav>
         </div>
+    </div>
 </body>
 </html>

@@ -18,4 +18,36 @@ h2 {
   width: 20px;
   border-top: 50%;
 }
+
+.jacket {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.one {
+  width: 30%;
+  margin-left: 40%;
+}
+
+.two {
+  width: 30%;
+}
+
+#btn-play {
+  border: 1px solid black;
+  width: 80px;
+  display: inline-block;
+  height: 10px;
+}
+
+.play, .next, .random {
+  width: 40px;
+  height: 40px;
+  opacity: 0.3;
+}
+
+#button {
+  margin-top: 20px;
+}
 /*# sourceMappingURL=player.css.map */

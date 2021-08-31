@@ -31,8 +31,6 @@
     -webkit-transform: translateX(-6vw);
             transform: translateX(-6vw);
     margin-top: 8vh;
-    -o-object-fit: cover;
-       object-fit: cover;
     z-index: 1;
   }
   #arm {
@@ -59,6 +57,7 @@
     text-align: center;
     font-weight: 500;
     font-size: 1em;
+    line-height: 4em;
   }
 }
 /*# sourceMappingURL=style-index.css.map */

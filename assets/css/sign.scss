@@ -1,0 +1,93 @@
+@import './variables','./nav';
+
+body{
+    //enlève la barre de défilement
+    overflow-y: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: $light_grey;
+    font-size: 17px;
+    margin: 0;
+    
+    h3{
+        //permet de mettre le titre devant l'img background qui est en absolute
+        position: relative;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 30%;
+        font-size: 1.550em;
+    }
+    
+    label{
+        font-weight: bold;
+    }
+    
+    input{
+        color: $light_grey;
+        background-color: #1ad1a4;
+        //enlève les bordures gauche haut et droit
+        border-top: hidden;
+        border-left: hidden;
+        border-right: hidden;
+        //enlève l'encadrement de l'input
+        outline: none;
+        width: 180px;
+        font-size: 17px;
+        margin-bottom: 0px;
+        }
+        
+    }
+
+.img{
+    //pour passer l'img background en arrière plan
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    }
+
+.container{
+    position: relative;
+    width: 50%;
+    margin: auto;
+    }
+
+// création d'un bloc de propriété
+%styleBtn {
+    font-weight: bold;
+    text-decoration: none;
+    color: $light_grey;
+    display: block;
+    margin-top: 40px;
+}
+
+//BOUTON DONE
+.btnDone{
+    //appel du bloc de propriété
+    @extend %styleBtn;
+    border: hidden;
+    background-color: #5f24ed;
+    width: 50%;
+    padding: 10px 10px;
+    border-radius: 0 10px;
+}
+
+//div pour centrer le bouton sur l'écran
+.cntrDone{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+//LIEN POUR LE COMPTE
+.btnCompte{
+    //appel du bloc de propriété
+    @extend %styleBtn;
+    text-align: center;
+}
+
+.error{
+    color: red;
+    display: none;
+    margin: 0;
+}

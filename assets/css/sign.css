@@ -1,0 +1,90 @@
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+footer nav {
+  background: linear-gradient(0.25turn, #ffffff, #e7e4ff);
+  text-align: center;
+  padding: 1vh;
+}
+footer nav img {
+  width: 32px;
+  padding: 1vh 3vh;
+}
+
+body {
+  overflow-y: hidden;
+  font-family: "Roboto", sans-serif;
+  color: #f1f1f1;
+  font-size: 17px;
+  margin: 0;
+}
+body h3 {
+  position: relative;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30%;
+  font-size: 1.55em;
+}
+body label {
+  font-weight: bold;
+}
+body input {
+  color: #f1f1f1;
+  background-color: #1ad1a4;
+  border-top: hidden;
+  border-left: hidden;
+  border-right: hidden;
+  outline: none;
+  width: 180px;
+  font-size: 17px;
+  margin-bottom: 0px;
+}
+
+.img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  margin: auto;
+}
+
+.btnCompte, .btnDone {
+  font-weight: bold;
+  text-decoration: none;
+  color: #f1f1f1;
+  display: block;
+  margin-top: 40px;
+}
+
+.btnDone {
+  border: hidden;
+  background-color: #5f24ed;
+  width: 50%;
+  padding: 10px 10px;
+  border-radius: 0 10px;
+}
+
+.cntrDone {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.btnCompte {
+  text-align: center;
+}
+
+.error {
+  color: red;
+  display: none;
+  margin: 0;
+}/*# sourceMappingURL=sign.css.map */

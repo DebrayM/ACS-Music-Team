@@ -1,0 +1,18 @@
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer nav {
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#e7e4ff));
+  background: linear-gradient(0.25turn, #ffffff, #e7e4ff);
+  text-align: center;
+  padding: 1vh;
+}
+
+footer nav img {
+  width: 32px;
+  padding: 1vh 3vh;
+}
+/*# sourceMappingURL=nav.css.map */

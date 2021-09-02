@@ -3,29 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="stylesheet" href="player.scss">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel ="stylesheet" href="./player.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="nav.css">
+
     <title>Title of the song</title>
 </head>
 <body>
-    <div id="container">
+   
         <img class="album" src="https://rocknfool.net/wp-content/uploads/2017/01/Diamond-Dogs-1024x585.jpg">
+        <div id="purple_square"></div>
+        
+        <h2> Title of the song</h2>
+        <p class="name">Album</p>
+        
         <div id="form">
-            <h2> Title of the song</h2>
-            <p class="name">Album</p>
             <!-- création 'ID' pour definir la longueur du fichier -->
             <div id="audio-player">
-                <span id="current-time" class="time">0:00</span!> <!--début et fin de lecture piste--> 
-                <input type="range" id="seek-slider" max="100" value="0">
+                <span id="current-time" class="time">0:00</span> <!--début et fin de lecture piste--> 
                 <span id="duration" class="time">0:00</span>
+                <input type="range" class="seek-slider" id="seek-slider" min ="0" max="100" value="0" step="10">
+                <div class="value"></div>
+
                 <div id="button">
-                    <button class="play"type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00C193" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></button>
-                    <button class="next" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00C193" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-fast-forward"><polygon points="13 19 22 12 13 5 13 19"></polygon><polygon points="2 19 11 12 2 5 2 19"></polygon></svg></button>
-                    <button class="random" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00C193" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></button>
+                    <img src="./assets/icons/repeat.svg" alt="repeat">
+                    <img src="./assets/icons/fast-forward-left.svg" alt="fast forward left">
+                    <img id="play" src="./assets/icons/play.svg" alt="play">
+                    <img src="./assets/icons/fast-forward.svg" alt="fast forward">
+                    <img src="./assets/icons/shuffle.svg" alt="shuffle">
                 </div>
             </div>
-            <nav></nav>
-        </div>
-    </div>
+         </div>
+         
+        <footer>
+            <nav>
+                <a href="Index.html"><img src="assets/icons/home.svg" alt="Maison"></a>
+                <a href="#"></a><img src="assets/icons/headphones.svg" alt="Casque de musique"></a>
+                <a href="#"></a><img src="assets/icons/heart.svg" alt="Coeur"></a>
+                <a href="#"></a><img src="assets/icons/search.svg" alt="Loupe"></a>
+            </nav>
+        </footer>
 </body>
 </html>

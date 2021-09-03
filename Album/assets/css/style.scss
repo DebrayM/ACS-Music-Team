@@ -1,65 +1,64 @@
 @import './variables';
 
-
-
 body  {
+    overflow-y: hidden;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: white;
     margin: 0;
 }
 
-.container-red {
-    background-color : #ff7272;
-    padding-bottom: 125px;
-    padding-top: 30px;
-}
+/* Fenêtre Nom Album + Artiste*/
+    .container-red {
+        background-color : #ff7272;
+        padding-bottom: 125px;
+        padding-top: 30px;
+    }
 
-h1 {
-    padding-left: 29px;
-    margin-bottom: -12px;
-    font-weight: normal;
-    
-}
+        /*Nom Album*/   
+            h1 {  
+                padding-left: 29px;
+                margin-bottom: -12px;
+                font-weight: normal;   
+            }
 
-p {
-    padding-left: 29px;
-}
+        /* Nom Artiste*/   
+            p {  
+                padding-left: 29px;
+            }
 
-.container-blue {
-    background-color: #5f24ed;
-    padding-bottom: 65px;
-    padding-top: 111px;
-}
+/* Fenêtre contenu de l'Album*/
+    .container-blue {
+        background-color: #5f24ed;
+        padding-bottom: 65px;
+        padding-top: 111px;
+    }
+        /* Liste des Tracks */ 
+            a { 
+                list-style: none;
+                margin-bottom: 12px;
+                text-decoration: none;
+                text-decoration-color: none;
+                color: white;
+                font-weight: medium;
+                font-size : 1.3em;
+            }
 
-li {
-    list-style: none;
-    margin-bottom: 12px;
-}
-
-a {
-    text-decoration: none;
-    text-decoration-color: none;
-    color: white;
-    font-weight: medium;
-    font-size : 1.3em;
-}
-
-.whiteLine {
-    background-color: #9c7beb;
-    padding-left: 6vh;
-    margin-left: -6vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-}
-
-#img {
-    position: absolute;
-    width: 314px;
-    top:148px;
-    left: 29px;
-    z-index:1
-   
-}
+        /* background-color Tracks*/
+            .whiteLine {
+                background-color: #9c7beb;
+                padding-left: 6vh;
+                margin-left: -6vh;
+                padding-top: 1vh;
+                padding-bottom: 1vh;
+            }
+/*Pochette d'album*/
+    #img {
+        position: absolute;
+        width: 314px;
+        top:148px;
+        left: 29px;
+        z-index:1   
+    }
 
 @import './nav';

@@ -15,15 +15,11 @@ h1 {
   color: #f1f1f1;
   font-size: 2em;
   font-weight: 500;
-  padding-top: 6vh;
-  padding-left: 2vh;
 }
 
 /* search */
 #sect-search {
-  margin-top: 10vh;
-  margin-bottom: 3vh;
-  margin-left: 35%;
+  margin-left: 30%;
   color: #f1f1f1;
   font-weight: 500;
 }
@@ -42,18 +38,17 @@ h1 {
   border-bottom-color: #f1f1f1;
 }
 
-/* Carousel images défilantes*/
-.div-carousel {
+/* Images défilantes*/
+.scroller {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  background-color: #f8a7a7;
+  gap: 1vh;
+  padding-top: 2vh;
+  overflow-x: scroll;
 }
-.div-carousel img {
-  width: 200px;
-  height: 200px;
+.scroller img {
+  width: 100px;
+  height: 100px;
 }
 
 /* Mosaique */
@@ -61,16 +56,14 @@ h4 {
   color: #f1f1f1;
   font-size: 1.2em;
   font-weight: 500;
-  padding-top: 6vh;
   padding-left: 2vh;
 }
 
 .div-8 {
   display: flex;
   flex-direction: column;
-  gap: 3vh;
-  padding-left: 1.5vh;
-  padding-bottom: 5vh;
+  gap: 1vh;
+  padding-left: 2vh;
 }
 .div-8 img {
   width: 80px;
@@ -79,15 +72,20 @@ h4 {
 .div-8 .div-4 {
   display: flex;
   flex-direction: row;
-  gap: 3vh;
+  gap: 1vh;
 }
 
-nav {
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+footer nav {
   background: linear-gradient(0.25turn, #ffffff, #e7e4ff);
   text-align: center;
   padding: 1vh;
 }
-nav img {
+footer nav img {
   width: 32px;
   padding: 1vh 3vh;
 }/*# sourceMappingURL=songs.css.map */

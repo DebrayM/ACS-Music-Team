@@ -24,15 +24,11 @@ h1 {
     color: $light_grey;
     font-size: 2em;
     font-weight: 500;
-    padding-top: 6vh;
-    padding-left: 2vh;
 }
 
 /* search */
 #sect-search {
-    margin-top: 10vh;
-    margin-bottom: 3vh;
-    margin-left: 35%;
+    margin-left: 30%;
     color: $light_grey;
     font-weight: 500;
     label {
@@ -51,21 +47,18 @@ h1 {
     border-bottom-color: $light_grey;
 }
 
-
-
-/* Carousel images défilantes*/
-.div-carousel {
-    img {
-        width: 200px;
-        height : 200px
-    }
+/* Images défilantes*/
+.scroller {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    background-color: #f8a7a7;
-}
+    gap: 1vh;
+    padding-top: 2vh;
+    img {
+        width: 100px;
+        height : 100px;
+    }
+    overflow-x: scroll;
+  }
 
 /* Mosaique */
 
@@ -73,7 +66,6 @@ h4 {
     color: $light_grey;
     font-size: 1.2em;
     font-weight: 500;
-    padding-top: 6vh;
     padding-left: 2vh;
 }
 .div-8 {
@@ -83,13 +75,12 @@ h4 {
     }
     display: flex;
     flex-direction: column;
-    gap:3vh;
-    padding-left: 1.5vh;
-    padding-bottom: 5vh;
+    gap: 1vh;
+    padding-left: 2vh;
     .div-4 {
         display: flex;
         flex-direction: row;
-        gap:3vh;
+        gap:1vh;
     }
 }
 

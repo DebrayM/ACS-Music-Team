@@ -1,30 +1,14 @@
-footer {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-}
-footer nav {
-  background: linear-gradient(0.25turn, #ffffff, #e7e4ff);
-  text-align: center;
-  padding: 1vh;
-}
-footer nav img {
-  width: 32px;
-  padding: 1vh 3vh;
-}
-
 body {
-  overflow-y: hidden;
+  overflow: hidden;
   font-family: "Roboto", sans-serif;
-  color: #f1f1f1;
+  color: #FFFFFF;
   font-size: 17px;
   margin: 0;
 }
 body h3 {
   position: relative;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 30%;
   font-size: 1.55em;
 }
@@ -32,8 +16,8 @@ body label {
   font-weight: bold;
 }
 body input {
-  color: #f1f1f1;
-  background-color: #1ad1a4;
+  color: #FFFFFF;
+  background: transparent;
   border-top: hidden;
   border-left: hidden;
   border-right: hidden;
@@ -41,14 +25,14 @@ body input {
   width: 180px;
   font-size: 17px;
   margin-bottom: 0px;
+  border-color: #FFFFFF;
 }
 
 .img {
   position: absolute;
   width: 100%;
   top: 0;
-  left: 0;
-  z-index: 0;
+  left: -20px;
 }
 
 .container {
@@ -60,14 +44,14 @@ body input {
 .btnCompte, .btnDone {
   font-weight: bold;
   text-decoration: none;
-  color: #f1f1f1;
+  color: #FFFFFF;
   display: block;
   margin-top: 40px;
 }
 
 .btnDone {
   border: hidden;
-  background-color: #5f24ed;
+  background-color: #0184AE;
   width: 50%;
   padding: 10px 10px;
   border-radius: 0 10px;
@@ -81,10 +65,18 @@ body input {
 
 .btnCompte {
   text-align: center;
+  color: #DEDEDE;
 }
 
 .error {
-  color: red;
+  color: #D2A800;
   display: none;
   margin: 0;
+}
+
+#trait {
+  border-top: 2px #DEDEDE solid;
+  width: 20%;
+  position: absolute;
+  right: 10px;
 }/*# sourceMappingURL=sign.css.map */

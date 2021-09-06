@@ -22,9 +22,13 @@
 
         <h3>Sign Up .</h3>
 
+        <!-- div contenant le message d'erreur côté serveur -->
+        <div id="messError"></div>
+        
+
         <!-- Container pour centrer le formulaire -->
         <div class="container">   
-            <form action="#" method="post">
+            <form id="formSignup" method="post">
 
                 <!-- input name -->
                 <div>
@@ -36,14 +40,14 @@
                 <!-- input email -->
                 <div>
                     <label for="email"><p>Email address</p></label>
-                    <input id="email" type="mail" name="email">
+                    <input id="email" type="email" name="email">
                 </div>
 
                 <!-- input password -->
                 <div>
                     <label for="pwd"><p>Password</p></label>
                     <input id="pwd" type="password" name="mdp">
-                    <p id="pwdError" class="error">5 characters minimum</p>
+                    <p id="pwdError" class="error">12 characters minimum</p>
                 </div>
                 
                 <!-- bouton done -->
@@ -52,7 +56,7 @@
                 </div>
 
                 <!-- lien déjà un compte -->
-                <a href="#" class="btnCompte">/ Already an account ?</a>
+                <a href="signin.html" class="btnCompte">/ Already an account ?</a>
                 <div id="trait"></div>
             </form>
         </div>

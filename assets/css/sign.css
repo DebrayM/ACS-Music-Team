@@ -12,6 +12,11 @@ body h3 {
   margin-bottom: 30%;
   font-size: 1.55em;
 }
+body #messError {
+  position: relative;
+  color: #FF0077;
+  text-align: center;
+}
 body label {
   font-weight: bold;
 }

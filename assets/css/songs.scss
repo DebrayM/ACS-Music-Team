@@ -1,51 +1,71 @@
-//color:
-$strong_green : #00c193;
-$light_green : #63ffd4;
-$strong_grey : #b9b9b9;
-$light_grey : #f1f1f1;
-$purple : #5f24ed;
-$red : #ff7272;
-$player_grey : #4c4c4d;
-$input_validation : #b3ff2d;
-// dégradé
-$nav_gradiant: linear-gradient(0.25turn, #ffffff, #e7e4ff);
+@import 'nav';
 
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin: 0;
-    background-color: $red;
+    background: $purpleGradient;
+    background-repeat: no-repeat;
 }
+/* entête : affichage du titre */
 header {
-    background-color: $red;
-    margin: 0;
-}
-h1 {
-    color: $light_grey;
-    font-size: 2em;
-    font-weight: 500;
+    margin-top: 3vh;
+    margin-left: 4vh;
+    h1 {
+        color: $light_grey;
+        font-size: 1.5em;
+        font-weight: 500;
+    }
 }
 
-/* search */
+/* Barre de recherche */
+/* section de recherche */
 #sect-search {
-    margin-left: 30%;
+    margin-top: 6vh;
+    margin-left: 35%;
     color: $light_grey;
-    font-weight: 500;
+
+    a {
+        text-decoration: none;
+        color: $light_grey;
+    }
+    img {
+        width: 24px;
+    }
+
     label {
+    /* libellé de la barre de recherche */
         font-size: 1em;
         font-weight: 500;
         display: block;
     }
+
+    input {
+    /* barre de recherche (input) */
+        background-color: #140141;
+        opacity: 0%;
+    }
+    #flex-dot {
+        display: flex;
+        justify-content: end;
+        gap: 2vh;
+        #dot {
+            /* $dotSearch: #2ECBB8; */
+            width: 1vh;
+            height: 1vh;
+            background-color: $dotSearch;
+            border-radius: 50%;
+        }
+    
+        hr {
+            width: 100%;
+            border-bottom-color: $light_grey;
+        }
+    }
+
 }
 
-#bar-search {
-    background-color: $red;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 3px solid;
-    border-bottom-color: $light_grey;
-}
+
 
 /* Images défilantes*/
 .scroller {
@@ -54,21 +74,29 @@ h1 {
     gap: 1vh;
     padding-top: 2vh;
     img {
-        width: 100px;
-        height : 100px;
+        width: 150px;
+        height : 150px;
     }
     overflow-x: scroll;
-  }
+}
 
 /* Mosaique */
-
+#recently{
+    display: flex;
+    flex-direction: row;
+    gap: 3vh;
+    img{
+        width: 24px;
+        padding-top: 3vh;
+    }
+}
 h4 {
     color: $light_grey;
     font-size: 1.2em;
     font-weight: 500;
     padding-left: 2vh;
 }
-.div-8 {
+#div-8 {
     img {
         width: 80px;
         height : 80px
@@ -84,5 +112,3 @@ h4 {
     }
 }
 
-
-@import 'nav.scss';

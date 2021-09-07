@@ -6,29 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Songs</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/songs.css">
-    <script src="songs.js"></script>
+    <link rel="stylesheet" href="./assets/css/songs.css">
+    <script src="api-music.js"></script>
 </head>
 <body>
     <header>
-        <h1>Songs</h1>
+        <h1>Songs /</h1>
     </header>
     <main>
         <section id="sect-search">
+            <a href="#" id="signIN">... Sign IN ...</a>
+            <a href="#"><img src="assets/icons/headphones.svg" alt="Rechercher" id="api_music"></a>
             <label for="bar-search">Search</label>
             <input type="text" name="bar-search" id="bar-search">
-            <a href="#"><img src="assets/icons/search.svg" alt="Rechercher" id="id-search"></a>
+            <div id="flex-dot">
+                <div id="dot"></div>
+                <hr>
+            </div>
         </section>
         <section>
             <div class="scroller" id="id_scroll">
                 <!--
-                ...cette div reçoit les images des album d'un artiste en dynamique...
+                ...cette div reçoit les images des albums d'un artiste en dynamique...
                 -->
+                <div><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img1"></div>
+                <div><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img1"></div> 
+                <div><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img1"></div>        
             </div>
         </section>
         <section>
+            <div id="recently">
             <h4>Recently played</h4>
-            <div class="div-8">
+            <a href="#"><img src="assets/icons/headphones.svg" alt="Rechercher" id="api_music"></a>
+            </div>
+            <div id="div-8">
                 <div class="div-4">
                 <div id="div-img1"><a href="#"><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img1"></a></div>
                 <div id="div-img2"><a href="#"><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img2"></a></div>
@@ -46,10 +57,10 @@
     </main>
     <footer>
         <nav>
-            <a href="Index.html"><img src="assets/icons/home.svg" alt="Maison"></a>
-            <a href="#"></a><img src="assets/icons/headphones.svg" alt="Casque de musique"></a>
-            <a href="#"></a><img src="assets/icons/heart.svg" alt="Coeur"></a>
-            <a href="#"></a><img src="assets/icons/search.svg" alt="Loupe"></a>
+            <a href="Index.html"><img src="./assets/icons/home.svg" alt="Maison"></a>
+            <a href="#"></a><img src="./assets/icons/headphones.svg" alt="Casque de musique"></a>
+            <a href="#"></a><img src="./assets/icons/heart.svg" alt="Coeur"></a>
+            <a href="#"></a><img src="./assets/icons/search.svg" alt="Loupe"></a>
         </nav>
     </footer>
 </body>

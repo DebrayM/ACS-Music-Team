@@ -1,9 +1,13 @@
+@import '_variables';
+
 footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    left: 0;
     nav {
-        background: $nav_gradiant;
+        background: $navGradient;
+        opacity: 0.14;
         text-align: center;
         padding: 1vh;
         img {

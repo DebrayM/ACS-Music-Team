@@ -1,13 +1,22 @@
+<<<<<<< HEAD
 @import '_variables';
+=======
+@import 'variables';
+>>>>>>> 0de16cce5a590f0db576479d26a28f1347b49685
 
 footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+<<<<<<< HEAD
     left: 0;
     nav {
         background: $navGradient;
         opacity: 0.14;
+=======
+    nav {
+        background: $navGradient;
+>>>>>>> 0de16cce5a590f0db576479d26a28f1347b49685
         text-align: center;
         padding: 1vh;
         img {

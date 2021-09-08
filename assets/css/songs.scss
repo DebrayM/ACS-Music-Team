@@ -81,15 +81,6 @@ header {
 }
 
 /* Mosaique */
-#recently{
-    display: flex;
-    flex-direction: row;
-    gap: 3vh;
-    img{
-        width: 24px;
-        padding-top: 3vh;
-    }
-}
 h4 {
     color: $light_grey;
     font-size: 1.2em;

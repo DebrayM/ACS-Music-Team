@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Songs</title>
+    <title>Songs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/songs.css">
-    <script src="api-music.js"></script>
+    <script src="assets/js/api-music.js"></script>
 </head>
 <body>
     <header>
@@ -15,8 +17,6 @@
     </header>
     <main>
         <section id="sect-search">
-            <a href="#" id="signIN">... Sign IN ...</a>
-            <a href="#"><img src="assets/icons/headphones.svg" alt="Rechercher" id="api_music"></a>
             <label for="bar-search">Search</label>
             <input type="text" name="bar-search" id="bar-search">
             <div id="flex-dot">
@@ -28,29 +28,16 @@
             <div class="scroller" id="id_scroll">
                 <!--
                 ...cette div reçoit les images des albums d'un artiste en dynamique...
-                -->
-                <div><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img1"></div>
-                <div><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img1"></div> 
-                <div><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img1"></div>        
+                -->       
             </div>
         </section>
         <section>
-            <div id="recently">
             <h4>Recently played</h4>
-            <a href="#"><img src="assets/icons/headphones.svg" alt="Rechercher" id="api_music"></a>
-            </div>
             <div id="div-8">
-                <div class="div-4">
-                <div id="div-img1"><a href="#"><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img1"></a></div>
-                <div id="div-img2"><a href="#"><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img2"></a></div>
-                <div id="div-img3"><a href="#"><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img3"></a></div>
-                <div id="div-img4"><a href="#"><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img4"></a></div>
-                </div>
-                <div class="div-4">
-                <div id="div-img5"><a href="#"><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img5"></a></div>
-                <div id="div-img6"><a href="#"><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img6"></a></div>
-                <div id="div-img7"><a href="#"><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img7"></a></div>
-                <div id="div-img8"><a href="#"><img src="assets/images/pexels-pixabay-33597.jpg" alt="vignettes des titres écoutés" id="img8"></a></div>
+                <!--
+                ...cette div reçoit en dynamique les deux blocs d'images 
+                ...des 8 derniers albums écoutés récemment...
+                -->
                 </div>
             </div>
         </section>

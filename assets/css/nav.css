@@ -2,6 +2,20 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
+<<<<<<< HEAD
+  left: 0;
+}
+footer nav {
+  background: linear-gradient(0.5turn, #270049, #A07EBC, #FFFFFF);
+  opacity: 0.14;
+  text-align: center;
+  padding: 1vh;
+}
+footer nav img {
+  width: 32px;
+  padding: 1vh 3vh;
+}/*# sourceMappingURL=nav.css.map */
+=======
 }
 
 footer nav {
@@ -23,3 +37,4 @@ footer nav {
   padding: 1vh 3vh;
 }
 /*# sourceMappingURL=nav.css.map */
+>>>>>>> 0de16cce5a590f0db576479d26a28f1347b49685

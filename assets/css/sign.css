@@ -1,0 +1,87 @@
+body {
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  font-size: 17px;
+  margin: 0;
+}
+body h3 {
+  position: relative;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30%;
+  font-size: 1.55em;
+}
+body #messError {
+  position: relative;
+  color: #FF0077;
+  text-align: center;
+}
+body label {
+  font-weight: bold;
+}
+body input {
+  color: #FFFFFF;
+  background: transparent;
+  border-top: hidden;
+  border-left: hidden;
+  border-right: hidden;
+  outline: none;
+  width: 180px;
+  font-size: 17px;
+  margin-bottom: 0px;
+  border-color: #FFFFFF;
+}
+
+.img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: -20px;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  margin: auto;
+}
+
+.btnCompte, .btnDone {
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  margin-top: 40px;
+}
+
+.btnDone {
+  border: hidden;
+  background-color: #0184AE;
+  width: 50%;
+  padding: 10px 10px;
+  border-radius: 0 10px;
+}
+
+.cntrDone {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.btnCompte {
+  text-align: center;
+  color: #DEDEDE;
+}
+
+.error {
+  color: #D2A800;
+  display: none;
+  margin: 0;
+}
+
+#trait {
+  border-top: 2px #DEDEDE solid;
+  width: 20%;
+  position: absolute;
+  right: 10px;
+}/*# sourceMappingURL=sign.css.map */

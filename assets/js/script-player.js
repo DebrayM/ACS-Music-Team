@@ -200,3 +200,32 @@ shuffle.addEventListener('click', shuffleSongs);
 //loop (événement click pur lancer le repeat d'un morceau de musique)
 looping.addEventListener('click', loopSong);
 
+
+
+
+
+
+
+
+
+///////////////////////////////////////:::The Fetch !
+
+
+fetch('http://api-music.test/api/albums/156', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MzExMDEyMjAsImV4cCI6MTYzMTEwNDgyMCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZGVtb0BkZW1vLmNvbSJ9.pP31mRhm0UmVWsPXMlaYfW1MeZ8FEGZeavx1vz3Q5o1OjC2aaYRw3E7EiGOz0EiYHP3GmmpqNJUm0SRFftwgWpmDPsJsyIZw64ZTpYD8fuM21riuF3ensuT35JQWPiIIW5T70EsBm5gdplgomiMmoFwVvPhQnMrjZMm-6En_AQk6kSuUmmo6uS19hvOUjQ8tZ8eupR-5VK69ZxcPX4lVsnMTnALhx8PAgEUs63W12q7FQcBdXJ61vzcGcoyHj6hL1oLM2tsqjmDXXZqtZ3T4S7H0pmUJjhco9sScKy_4qvsAOr_73ANos3AHzUfN_MgrryaW4bF7CQh4a5O1mcyLI3seYlHT0_mdr53UJsVGqql-epiYWLqtHvtMgpP8QHCk_WF5AUN7Q17zUV6C7PPpSv0pK3SgtvHuf6JDukOs3p9J7TD6jigilnKF7vYDnHhx_kKeltbDpQegFqWA5olisM15CVJYJ7PTg-1DBvteWK6BHGNxgY4NzC55tVaKgr2oLalzWgCGQhZJCZjD_vxJOSalJ81ks3Hh8fSKyUTpqBXnUOHhTd7mrH3ZfMxDYIa7gAatS4E4Mx9NXj9fPS8aaYhCYHA1Yamsgm7o7HXoUj6jAdyPJ2O8g1N1Zoz_XGIKuXavCn_zYWNUr1Bjgu7DUP9dnLNbmUeaY47IcUR3FJM'
+  }
+})
+  .then(response => response.json())
+  .then(coverAlbum => {
+    //console.log(coverAlbum);
+    cover.src = coverAlbum.picture;
+    title.textContent = coverAlbum.name;
+    albumName.textContent = coverAlbum.artist;
+    songs.push(coverAlbum);
+    
+
+  })
+  .catch(e => console.log(e));

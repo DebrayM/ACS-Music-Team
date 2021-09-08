@@ -43,7 +43,7 @@ function load_api_music() {
                 container_img = container_img + '<div class="album"><a href="#" id="ida' + y +'">';
                 container_img = container_img + '<img src="' + albums.picture + '" alt="' + albums.name + '" id="' + albums.id + '">';
                 container_img = container_img + "</a></div>";
-                console.log("ID de l'album : " + albums.id);
+                //console.log("ID de l'album : " + albums.id);
                 y++
             });
             // afficher la structure créée dans la div id="id_scroll" //

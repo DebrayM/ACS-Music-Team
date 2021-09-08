@@ -3,37 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <script src="album.js"></script>
+    <link rel="stylesheet" href="assets/css/album.css">
    
-    
+    <script src="album.js">
+        
+    </script>
 
     <title>Album</title>
 
 </head>
 <body>
-    <div class="container-red">
+    
+
+    <div class="containerNom">
             <h1>Album name</h1>
             <p>Artist</p>
     </div>
-    <div id ="blue" class="container-blue">
-        <a href="#" id="btn">cliquez</a>
-        <ul id="Tracks">
-            <li class="whiteLine"><a href="#" class ="Track1">Track name #1</a></li>     
-            <li><a href="#" class ="Track2" id="Track2">Track name #2</a></li>   
-            <li class="whiteLine"><a href="#" class ="Track3" id="Track3">Track name #3</a></li>   
-            <li><a href="#" class ="Track4" id="Track4">Track name #4</a></li>   
-            <li class="whiteLine"><a href="#" class ="Track5" id="Track5">Track name #5</a></li> 
+
+    <div><img src="assets/images/dotsv2.svg" alt="dots" class= "dots"></div>
+
+    <div id ="blue" class="containerTrack">
+        <div class="verticalLine"></div>
+        <div>
+            
+            <a href="#" class="onPlay">.</a>  
+        </div>
+        <ul id="trackList">
+            <li><a href="#" class ="Track1" id="Track1">Track name #1 <span>/1:22</span></a></li>     
+            <li><a href="#" class ="Track2" id="Track2">Track name #2 <span>/2:30</span></a></li>   
+            <li><a href="#" class ="Track3" id="Track3">Track name #3 <span>/3:50</span></a></li>   
+            <li><a href="#" class ="Track4" id="Track4">Track name #4 <span>/4:20</span></a></li>   
+            <li><a href="#" class ="Track5" id="Track5">Track name #5 <span>/1:10</span></a></li> 
         </ul>    
     </div>
+
     <div> 
         <img src="assets/images/pexels-pixabay-33597.jpg" alt="img" id ="img">
     </div>
+
+    
     
     <footer>
         <nav>

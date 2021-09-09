@@ -131,6 +131,6 @@ function songsSelect() {
 function load_album_sheet(paramkey) {
     //j'ai stocké l'album dans le localStorage
     //j'envoie le paramètre clé avec dans l'URL de la page HTML
-    let nouvelleAdresse = "page_album.html?" + paramkey;
+    let nouvelleAdresse = "album.html?" + paramkey;
     location.href = nouvelleAdresse;
 }

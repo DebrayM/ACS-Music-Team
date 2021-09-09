@@ -3,8 +3,9 @@
     margin: 0;
     padding: 0;
     border: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
+
   body {
     background: radial-gradient(#380e8b, #13012e);
     background-attachment: fixed;
@@ -12,6 +13,7 @@
     position: relative;
     overflow: hidden;
   }
+
   #logo {
     width: 50%;
     height: auto;
@@ -19,6 +21,7 @@
     margin-top: -7vh;
     display: block;
   }
+
   #create_account {
     text-decoration: none;
     color: white;
@@ -28,15 +31,16 @@
     position: absolute;
     z-index: 100;
   }
+
   #disc {
     width: 112%;
     height: auto;
     position: absolute;
-    -webkit-transform: translateX(-6vw);
-            transform: translateX(-6vw);
+    transform: translateX(-6vw);
     margin-top: 4.5vh;
     z-index: 10;
   }
+
   #arm {
     margin-left: 60vw;
     margin-top: -10vh;
@@ -46,6 +50,7 @@
     z-index: 100;
     opacity: 0.85;
   }
+
   #signIn {
     text-decoration: none;
     text-transform: uppercase;
@@ -64,51 +69,50 @@
     font-size: 1em;
     line-height: 4em;
   }
+
   #ellipse {
     width: 130%;
     height: auto;
     position: absolute;
-    -webkit-transform: translateX(-15vw);
-            transform: translateX(-15vw);
+    transform: translateX(-15vw);
     margin-top: -0.5vh;
     z-index: 1;
   }
+
   #dots {
     width: 120%;
     opacity: 0.41;
     height: auto;
     position: absolute;
-    -webkit-transform: translateX(-20vw);
-            transform: translateX(-20vw);
+    transform: translateX(-20vw);
     margin-top: 15vh;
     z-index: 3;
   }
+
   #right {
     border-bottom: 2px solid #ebdede;
     width: 34px;
     margin-top: 34vh;
     position: absolute;
-    -webkit-transform: translateX(42.5vw);
-            transform: translateX(42.5vw);
+    transform: translateX(42.5vw);
     z-index: 10;
   }
+
   #left {
     border-bottom: 2px solid #ebdede;
     width: 34px;
     margin-top: 38vh;
     position: absolute;
-    -webkit-transform: translateX(52vw);
-            transform: translateX(52vw);
+    transform: translateX(52vw);
     z-index: 100;
   }
+
   #account {
     border-bottom: 2px solid #ebdede;
     width: 34px;
     margin-top: 71vh;
     position: absolute;
-    -webkit-transform: translateX(62vw);
-            transform: translateX(62vw);
+    transform: translateX(62vw);
     z-index: 100;
   }
-}
-/*# sourceMappingURL=style-index.css.map */
+}/*# sourceMappingURL=style-index.css.map */

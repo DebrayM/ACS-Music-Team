@@ -187,4 +187,16 @@ body {
   position: absolute;
   z-index: 50;
 }
+
+#back {
+  position: absolute;
+  z-index: 200;
+  -webkit-transform: translateX(-47vw);
+          transform: translateX(-47vw);
+  margin-top: -54.5vh;
+}
+
+#timer {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style-player.css.map */

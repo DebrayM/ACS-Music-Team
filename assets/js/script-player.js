@@ -1,9 +1,22 @@
+window.onload = function() {
+
+  let params = new URLSearchParams(document.location.search.substring(1));
+  alert(params);
+  //disc.play(params.get("id"));
+ 
+
+}
+
+
+
 // variables qui visent les différents éléments html
 
 const cover = document.getElementById('cover');
 const disc = document.getElementById('disc');
 const title = document.getElementById('title');
 const albumName = document.getElementById('albumName');
+
+const back = document.querySelector('#back');
 
 const progressContainer = document.getElementById('progress-container');
 const progress = document.getElementById('progress');
@@ -34,18 +47,18 @@ const songs = [
   },
   {
     
-    title: 'Venus & the Gang /',
+    title: 'What the phoque /',
     albumName: 'Galaxy worms',
-    coverPath: './assets/images/cover2.jpg',
-    discPath: './assets/music/music2.mp3',
-    duration: '2:22',
+    coverPath: './assets/images/mermaid.jpg',
+    discPath: './assets/music/bensound-deepblue.mp3',
+    duration: '04:48',
   },
   {
-    title: 'What the phoque /',
-    albumName: 'Seal me',
-    coverPath: './assets/images/cover3.jpg',
-    discPath: './assets/music/music3.mp3',
-    duration: '1:54',
+    title: 'Pony tale /',
+    albumName: 'Hiiii',
+    coverPath: './assets/images/pony.jpg',
+    discPath: './assets/music/bensound-moose.mp3',
+    duration: '02:40',
   },
 ];
 
@@ -171,6 +184,26 @@ function shuffleSongs() {
   disc.load();
   disc.play();
 }
+
+
+//function of back arrow
+
+function backAlbum() {
+  location.href = "./album.html";
+
+}
+
+
+
+// the surprise hidden inside the timer (un easter egg clin d'oeil à la série M. Robot)
+function easterEgg(){
+  title.textContent = 'Mr Robot'; 
+  albumName.textContent = 'Surprise !';
+  duration.textContent = 'I hacked you';
+  cover.src = './assets/images/surprise.jpg';
+  disc.src = './assets/music/newbrave.mp3';
+  disc.play();
+ }
   
 
 //////////////////////////////////Les divers événements sur les boutons
@@ -197,6 +230,74 @@ progressContainer.addEventListener('click', setProgress);
 //shuffle (événement click pour lancer le shuffle/random des morceaux de musique)
 shuffle.addEventListener('click', shuffleSongs);
 
-//loop (événement click pur lancer le repeat d'un morceau de musique)
+//loop (événement click pour lancer le repeat d'un morceau de musique)
 looping.addEventListener('click', loopSong);
 
+//back arrow to return in the tracks section (petite flèche de retour en arrière)
+back.addEventListener('click', backAlbum);
+
+// Little surprise stocked inside the timer when clicked (l'easter egg stocké dans le timer ;-)
+timer.addEventListener('click', easterEgg);
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////:::The Fetch !
+
+
+
+fetch('http://api-music.test/api/albums/156', { // fetch(newloc,
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MzExMDkwMzQsImV4cCI6MTYzMTcxMzgzNCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZGVtb0BkZW1vLmNvbSJ9.BYWMaT6CsdDU2LeRjxw74ignWHwlPVKWPVb-ujNHto5LPjvuf3fJ2wjSnm50H4zg_wDnsc7VueyIT_F8kuuTbj6QKicq0yMwCwcMfXin6kFbDnD0ZewcgOzsgLTNglAGxWVhhtAxnrFtbQhcoxWc59Ziqc9mGsTDmw-qn0rQMBSCWARlBCEfkAKE1KuZvMwN8Iotkj5bnGt0956VEMKpW7lfVWsfda-jFmhpRact2I3WivcPPc0eRDJYyltFW7WtmJfH35ssYKzf6-UJsB6YErqWifXu61lVUoyK45_wCBNQQ650FtGaAVTY3jTnGVAsPvmglGHEStdHEAC2ZQYnhzeknoFqFIr52E42NtufSsfDkEMWMqzZytUDUIKHwDJu6fCwM8qkaVAscGuMlonIS39H_U1kyPNW7CYH5q3-noHG9nKhoD1L7fL4TLO1VBtbuRmCpBve_bXDM5TocSeNbU8z0YtlkPXDOCMXSpFUFXakh3G4ljdfiiWz-ANl6Yk5yfLPbfwHiMhjG-jbDqTmL18A6lrCJq2XLGiGuXrXBzzMWX3qArj5K-KWrWvqaDNuZdkV2Bixx7wDbRzmoui9PUY_sh5e1gHUhk4YJaOifWoK_eWNEORFSfWxuKHO67NlgA1kJLXejHLiKs2fljl5Nf-f-4B8y2T5HoR1JgG9H2Q'
+  }
+})
+  .then(response => response.json())
+  .then(coverAlbum => {
+    //console.log(coverAlbum);
+    cover.src = coverAlbum.picture;
+    title.textContent = coverAlbum.name;
+    albumName.textContent = "";
+    
+    songs.push(coverAlbum);
+    
+
+  })
+  .catch(e => console.log(e));
+
+  
+
+
+
+/*
+
+//first page  (start from) :
+
+function getLocation() {
+  
+          var loc = url.search; 
+          localStorage.getItem = loc;
+        }
+
+
+// second page (landing on the player) :
+
+        function changeLocation() {
+  
+            // Change current location
+            var newloc = new URL "http://127.0.0.1:5500/album.html";
+           
+            window.location.href = localStorage.loc;
+        }
+ */
+
+      
+
+  
+  

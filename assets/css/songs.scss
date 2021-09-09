@@ -21,7 +21,7 @@ header {
 /* Barre de recherche */
 /* section de recherche */
 #sect-search {
-    margin-top: 6vh;
+    margin-top: 3vh;
     margin-left: 35%;
     color: $light_grey;
 
@@ -55,6 +55,7 @@ header {
             height: 1vh;
             background-color: $dotSearch;
             border-radius: 50%;
+            margin-top: 1vh;
         }
     
         hr {
@@ -73,21 +74,31 @@ header {
     display: flex;
     gap: 1vh;
     padding-top: 2vh;
+    margin-top : 3vh;
     img {
         width: 150px;
         height : 150px;
     }
     overflow-x: scroll;
+    scrollbar-width: none;
 }
 
 /* Mosaique */
 h4 {
     color: $light_grey;
-    font-size: 1.2em;
+    font-size: 0.9em;
     font-weight: 500;
-    padding-left: 2vh;
+    padding: 0.8vh 0.8vh;
+    margin-top: 5vh;
+    margin-left: -2vw;
+    background-color: $buttonForm;
+    border-radius : 8px 0;
+    width: 142px;
+    text-align: center;
 }
 #div-8 {
+
+    margin-top: 2vh;
     img {
         width: 80px;
         height : 80px
@@ -103,3 +114,37 @@ h4 {
     }
 }
 
+//dots background
+
+#dotsBackground {
+
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: -10;
+    transform: translateY(-85vh);
+    margin-left: -20vw;
+    opacity: 0.33;
+}
+
+//white rectangles
+
+#whiteRectangle {
+    width: 100%;
+    height: 165px;
+    opacity: 0.20;
+    background-color: white;
+    position: absolute;
+    z-index: -8;
+    margin-top: -24vh;
+}
+
+#whiteRectangle2 {
+    width: 100%;
+    height: 165px;
+    opacity: 0.10;
+    background-color: white;
+    position: absolute;
+    z-index: -9;
+    margin-top: -22vh;
+}

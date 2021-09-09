@@ -4,10 +4,10 @@ window.onload = function() {
     //console.log(params.get("id"));
     
     //affiche l'ID de l'album
-    let idalbum = '<p>' + params.get("id") + '</p>';
-    document.querySelector('div').innerHTML = idalbum;
+    //let idalbum = '<p>' + params.get("id") + '</p>';
+    //document.querySelector('div').innerHTML = idalbum;
 
-    loadalbumtracks (params.get("id"))
+    loadalbumtracks (params.get("id"));
 
 }
 
@@ -36,9 +36,9 @@ function loadalbumtracks (param) {
     {
         //affiche le titre de l'album
         let title = document.querySelector("h1");
-        title.innerText = post.name +" (" + post.id + ")";
+        title.innerText = post.name;
         //affiche l'image de l'album
-        let myalbum = '<img src="' + post.picture + '" alt="image">';
+        let myalbum = '<img src="' + post.picture + '" alt="Artist" id="img">';
         document.querySelector("#div1").innerHTML = myalbum;
         //recherche le nom de l'artiste de l'album
         apiArtist(post.artist);
@@ -56,7 +56,6 @@ function apitracks (tracks) {
     // récupère le token
     let token = loadToken();
     let myuldiv = document.createElement('ul');
-
         tracks.forEach(track => {
             fetch('http://api-music.test' + track, {
                 method: "GET",
@@ -70,10 +69,12 @@ function apitracks (tracks) {
             .then(response => response.json())
             .then(piste => 
                 {
-                    console.log("Nom de la piste musicale : " + piste.name)
-
+                    //console.log("Nom de la piste musicale : " + piste.name)
+                    //console.log("id de la piste "+piste.id);
+                    //console.log("li : " +'<a href="album.html?id="' + piste.id + '" class="trackEvent">'  + piste.name + "</a><span>/" + piste.time + "</span>");
+                    //crée la ligne LI avec le titre de la piste, le temps et l'ID
                     let li = document.createElement('li');
-                    li.innerText = piste.name + " (" + piste.time + ")";
+                    li.innerHTML = '<a href="player.html?id=' + piste.id + '" class="trackEvent">'  + piste.name + "</a><span>/" + piste.time + "</span>";
                     myuldiv.append(li);
 
                     document.querySelector("#div2").append(myuldiv);
@@ -99,11 +100,11 @@ function apiArtist(artist) {
     .then(response => response.json())
     .then(artistAlbum => 
         {
-            console.log("Nom de l'artiste' : " + artistAlbum.username);
+            //console.log("Nom de l'artiste' : " + artistAlbum.username);
 
-            let mydiv = document.getElementById("div1");
+            let mydiv = document.querySelector(".containerNom");
             let p = document.createElement('p');
-            p.innerText = artistAlbum.username + " (" + artistAlbum.id + ")" ;
+            p.innerText = artistAlbum.username;
             mydiv.append(p);
 
         })

@@ -1,4 +1,4 @@
-@import '_variables';
+@import 'variables';
 
 footer {
     position: fixed;
@@ -8,7 +8,7 @@ footer {
     
     nav {
         background: $navGradient;
-        opacity: 0.14;
+        box-shadow: inset 0 4px 0 rgba(202,194,202, 0.21);
         text-align: center;
         padding: 1vh;
         img {

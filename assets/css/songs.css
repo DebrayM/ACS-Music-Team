@@ -6,8 +6,8 @@ footer {
   left: 0;
 }
 footer nav {
-  background: linear-gradient(0.5turn, #270049, #A07EBC, #FFFFFF);
-  opacity: 0.14;
+  background: linear-gradient(0.5turn, #e6d8e6, #fef9ff);
+  box-shadow: inset 0 4px 0 rgba(202, 194, 202, 0.21);
   text-align: center;
   padding: 1vh;
 }
@@ -22,6 +22,7 @@ body {
   margin: 0;
   background: linear-gradient(0.5turn, #140141, #4B3AA2, #F1ECF5);
   background-repeat: no-repeat;
+  margin-bottom: 6vh;
 }
 
 /* entête : affichage du titre */

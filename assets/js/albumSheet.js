@@ -7,7 +7,7 @@ window.onload = function() {
     //let idalbum = '<p>' + params.get("id") + '</p>';
     //document.querySelector('div').innerHTML = idalbum;
 
-    loadalbumtracks (params.get("id"));
+    loadalbumtracks (params.get("id"))
 
 }
 
@@ -44,6 +44,11 @@ function loadalbumtracks (param) {
         apiArtist(post.artist);
         //recherche les pistes de l'album
         apitracks(post.tracks);
+ /**
+  * recherche les timer des tracks
+  * 
+  * apitrack(post.time)
+  *  */       
     })
 }
 
@@ -69,12 +74,12 @@ function apitracks (tracks) {
             .then(response => response.json())
             .then(piste => 
                 {
-                    //console.log("Nom de la piste musicale : " + piste.name)
-                    //console.log("id de la piste "+piste.id);
-                    //console.log("li : " +'<a href="album.html?id="' + piste.id + '" class="trackEvent">'  + piste.name + "</a><span>/" + piste.time + "</span>");
+                    console.log("Nom de la piste musicale : " + piste.name)
+                    console.log("id de la piste "+piste.id);
+                    console.log("li : " +'<a href="album.html?id="' + piste.id + '" class="trackEvent">'  + piste.name + "</a><span>/" + piste.time + "</span>");
                     //crée la ligne LI avec le titre de la piste, le temps et l'ID
                     let li = document.createElement('li');
-                    li.innerHTML = '<a href="player.html?id=' + piste.id + '" class="trackEvent">'  + piste.name + "</a><span>/" + piste.time + "</span>";
+                    li.innerHTML = '<a href="player.html?id=' + piste.id + '" class="trackEvent">'  + piste.name + "</a><span>/" + timeTrack(piste.time) + "</span>";
                     myuldiv.append(li);
 
                     document.querySelector("#div2").append(myuldiv);
@@ -109,4 +114,29 @@ function apiArtist(artist) {
 
         })
     .catch(error => alert('Erreur:'+ error))
+}
+
+
+
+
+function timeTrack(timestamp) {
+
+    //let today = new Date();
+    //let str = today.toUTCString()
+
+    //console.log(str)
+
+    let date = new Date(timestamp*1000);
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    return minutes + ':' + seconds;
+
+    //console.log(time);
+
+
+    //return Math.floor(timestamp/60)
+    //let toto = Math.floor(timestamp/60);
+    //let titi = Math.floor(timestamp-toto/60);
+    //console.log(toto);
+    //console.log(titi);
 }

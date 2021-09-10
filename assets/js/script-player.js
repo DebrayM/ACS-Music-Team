@@ -1,11 +1,13 @@
-window.onload = function() {
+//window.onload = function() {
 
-  let params = new URLSearchParams(document.location.search.substring(1));
-  alert(params);
-  //disc.play(params.get("id"));
+  let query = window.location.search // ?id=1025
+  const params = new URLSearchParams(query); // ['id': 1205]
+
+
+  loadalbumtracks(params.get("id")); // urlParams.get("id") -> 1205
  
 
-}
+//}
 
 
 
@@ -69,6 +71,7 @@ loadSong(songs[songIndex]);
 
 
 
+
 // Load the given song (chargement du morceau de musique de base)
 function loadSong(song) {
   cover.src = song.coverPath;
@@ -76,6 +79,7 @@ function loadSong(song) {
   title.textContent = song.title;
   albumName.textContent = song.albumName;
   duration.textContent = song.duration;
+  
 }
 
 // Toggle play and pause (fonction initiale des boutons play et pause)
@@ -165,7 +169,7 @@ function setProgress(ev) {
 }
 
 
-//shuffle (random des msorceaux de musique)
+//shuffle (random des morceaux de musique)
 function shuffleSongs() {
 
   let randomSongs = songs[Math.floor(Math.random() * songs.length)]; //randoming
@@ -250,28 +254,70 @@ timer.addEventListener('click', easterEgg);
 ///////////////////////////////////////:::The Fetch !
 
 
+function loadToken (){
+  // récupère le Token stockée dans le navigateur avec sessionStorage
+  return sessionStorage.getItem('Token');
+}
 
-fetch('http://api-music.test/api/albums/156', { // fetch(newloc,
+
+
+function loadalbumtracks (param) {
+  // récupère le token
+  let token = loadToken();
+  //création de l'url qui va envoyer la demande à l'api
+  let url = 'http://api-music.test/api/tracks/' + param;
+
+
+fetch(url, { // fetch(newloc,
   method: 'GET',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MzExMDkwMzQsImV4cCI6MTYzMTcxMzgzNCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZGVtb0BkZW1vLmNvbSJ9.BYWMaT6CsdDU2LeRjxw74ignWHwlPVKWPVb-ujNHto5LPjvuf3fJ2wjSnm50H4zg_wDnsc7VueyIT_F8kuuTbj6QKicq0yMwCwcMfXin6kFbDnD0ZewcgOzsgLTNglAGxWVhhtAxnrFtbQhcoxWc59Ziqc9mGsTDmw-qn0rQMBSCWARlBCEfkAKE1KuZvMwN8Iotkj5bnGt0956VEMKpW7lfVWsfda-jFmhpRact2I3WivcPPc0eRDJYyltFW7WtmJfH35ssYKzf6-UJsB6YErqWifXu61lVUoyK45_wCBNQQ650FtGaAVTY3jTnGVAsPvmglGHEStdHEAC2ZQYnhzeknoFqFIr52E42NtufSsfDkEMWMqzZytUDUIKHwDJu6fCwM8qkaVAscGuMlonIS39H_U1kyPNW7CYH5q3-noHG9nKhoD1L7fL4TLO1VBtbuRmCpBve_bXDM5TocSeNbU8z0YtlkPXDOCMXSpFUFXakh3G4ljdfiiWz-ANl6Yk5yfLPbfwHiMhjG-jbDqTmL18A6lrCJq2XLGiGuXrXBzzMWX3qArj5K-KWrWvqaDNuZdkV2Bixx7wDbRzmoui9PUY_sh5e1gHUhk4YJaOifWoK_eWNEORFSfWxuKHO67NlgA1kJLXejHLiKs2fljl5Nf-f-4B8y2T5HoR1JgG9H2Q'
+    'Authorization': `Bearer ${token}`
+    //'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MzExODk3OTIsImV4cCI6MTYzMTc5NDU5Miwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZGVtb0BkZW1vLmNvbSJ9.LfTVOdwM3O4Gw2OPzNgxeXX8MxVcm1mjJNyI_lHnKPa2HibG6DRrGVgSngzHr_x7IZYj_505k2MFw6bKY7BrInHRJuSga6GoLxpkgVKyllaQC9BmIGd-fDKoBq5mzc8s9lW5LKoy3gp7N18JHJOn6enSdHdZvxXJWRpXGt-dMJB5ZmcrtVyyl3-yPu1_ZanC-W0VdwGxlalKjgNY0Umiq2OC1WK6pYYwIBUPRBwTCWTXMVlLBY41bWO27_2wIKUO0Xuv_tGgmkX9UbO-Fz6jYVnq90AnLsXoNcC1W1P2F7CMABzz4tllXxPnFZxp1W90--RpDwaW-tiK-kbnmx1jumxNWYoGa0YG1xPTcgM8VhW_1W7GblPzjBWDSL_zs10cWLZVCtjvxM8tYheJhUxfAIL5ulzFh4lt6AynipQLQtRKLKMUEcQEkRuNzKcjkLTZD0pnNWtcBn6fL_7sZZq9NRuVKsNOyRZCzKcbaWShfNL5VYiB4F1KSNuGwN9eIZdyW-zg-hbThr36NSP29O-STCojFqy9UUdxqIm-JFEdNWxS3dhOnGreiBuzKGLTXW3y_vOdCzvxXHQmRS78bDvzyfFELV_3oif5ZJ5BF9EM5l5CkzCA8P22MSjgrY_0o6sbZIHUClhXxdSL9bm6h7WSMVTvUUxMxcR2igRVN8jBtZg'
   }
 })
   .then(response => response.json())
   .then(coverAlbum => {
     //console.log(coverAlbum);
-    cover.src = coverAlbum.picture;
-    title.textContent = coverAlbum.name;
-    albumName.textContent = "";
-    
-    songs.push(coverAlbum);
-    
 
+    fetch("http://api-music.test" + coverAlbum.album, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      }
+    })
+
+    .then(response => response.json())
+  .then(album => {
+    cover.src = album.picture
+  })
+    
+    
+    disc.src = './assets/music/bensound-moose.mp3';
+    title.textContent = coverAlbum.name;
+    duration.textContent = timeTrack(coverAlbum.time);
+    albumName.textContent = "";
+    songs.push(coverAlbum);
+    disc.play();
+      
+    
   })
   .catch(e => console.log(e));
 
   
+}
+
+function timeTrack(timestamp) {
+
+
+  let date = new Date(timestamp*1000);
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+  return minutes + ':' + seconds; 
+
+}
+
 
 
 
@@ -291,7 +337,7 @@ function getLocation() {
         function changeLocation() {
   
             // Change current location
-            var newloc = new URL "http://127.0.0.1:5500/album.html";
+            var newloc = new URL "http://api-music.test/api/albums/";
            
             window.location.href = localStorage.loc;
         }

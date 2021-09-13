@@ -1,10 +1,46 @@
 @import 'nav';
 
+/////////////////light mode
+  
+
+$backgroundLight: linear-gradient(0.50turn, #7c7399, #584F72, #F1ECF5);
+$textLight: white;
+$dotLight: #1D0A51;
+
+$backgroundDark: linear-gradient(0.50turn, #140141, #4B3AA2, #F1ECF5);
+$textDark: white;
+$dotDark: #2ECBB8;
+
+:root {
+    
+  --color-page-background: #{$backgroundDark};
+  --color-text: #{$textDark};
+  --dotSearch: #{$dotDark};
+
+}
+
+.dark {
+  --color-page-background: #{$backgroundDark};
+  --color-text: #{$textDark};
+  --dotSearch: #{$dotDark};
+}
+
+.light {
+  --color-page-background: #{$backgroundLight};
+  --color-text: #{$textLight};
+  --dotSearch: #{$dotLight};
+
+}
+  
+
+////////////////////////////
+
+
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin: 0;
-    background: $purpleGradient;
+    background: var(--color-page-background);
     background-repeat: no-repeat;
     margin-bottom: 6vh;
 }
@@ -54,7 +90,7 @@ header {
             /* $dotSearch: #2ECBB8; */
             width: 1vh;
             height: 1vh;
-            background-color: $dotSearch;
+            background-color: var(--dotSearch);
             border-radius: 50%;
             margin-top: 1vh;
         }
@@ -92,7 +128,7 @@ h4 {
     padding: 0.8vh 0.8vh;
     margin-top: 5vh;
     margin-left: -2vw;
-    background-color: $buttonForm;
+    background-color: var(--dotSearch);
     border-radius : 8px 0;
     width: 142px;
     text-align: center;

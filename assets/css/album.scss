@@ -1,9 +1,42 @@
 @import '_variables';
 
+/////////////////light mode
+  
+
+$backgroundLight: linear-gradient(180deg, rgba(88,79,114,1) 0%, rgba(124,115,153,1) 11%, rgba(241,236,245,1) 40%);
+$textLight: white;
+
+
+$backgroundDark: linear-gradient(180deg, rgba(20,1,65,1) 0%, rgba(75,58,162,1) 11%, rgba(241,236,245,1) 40%);
+$textDark: white;
+
+
+:root {
+    
+  --color-page-background: #{$backgroundDark};
+  --color-text: #{$textDark};
+ 
+
+}
+
+.dark {
+  --color-page-background: #{$backgroundDark};
+   
+}
+
+.light {
+  --color-page-background: #{$backgroundLight};
+   
+
+}
+  
+
+////////////////////////////
+
 
 
 body  {
-    background: $topGradient;
+    background: var(--color-page-background);
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;

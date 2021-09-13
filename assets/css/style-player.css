@@ -23,6 +23,18 @@ footer nav {
   padding: 1vh 3vh;
 }
 
+:root {
+  --rect: #1F0156 no-repeat url("../images/dotsv2_transparent.svg");
+}
+
+.dark {
+  --rect: #1F0156 no-repeat url("../images/dotsv2_transparent.svg");
+}
+
+.light {
+  --rect: #A09FAF no-repeat url("../images/dots-light-transparent.svg");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -109,23 +121,25 @@ body {
 }
 
 #title {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  text-align: left;
   font-weight: 600;
   color: #f1f1f1;
   position: absolute;
   -webkit-transform: translateY(-55vh);
           transform: translateY(-55vh);
-  margin-left: 10vw;
+  margin-left: 5vw;
   z-index: 150;
 }
 
 #albumName {
-  font-size: 1.8em;
+  font-size: 1.7em;
+  text-align: left;
   color: #f1f1f1;
   position: absolute;
   -webkit-transform: translateY(-50vh);
           transform: translateY(-50vh);
-  margin-left: 10vw;
+  margin-left: 7vw;
   z-index: 150;
 }
 
@@ -182,7 +196,7 @@ body {
   height: 52vh;
   width: 80vw;
   border-radius: 0 0 25px 0;
-  background: #1F0156 no-repeat url("../images/dotsv2_transparent.svg");
+  background: var(--rect);
   background-position: 115% 99%;
   position: absolute;
   z-index: 50;
@@ -191,8 +205,8 @@ body {
 #back {
   position: absolute;
   z-index: 200;
-  -webkit-transform: translateX(-47vw);
-          transform: translateX(-47vw);
+  -webkit-transform: translateX(-50vw);
+          transform: translateX(-50vw);
   margin-top: -54.5vh;
 }
 

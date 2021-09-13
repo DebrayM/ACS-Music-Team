@@ -1,10 +1,49 @@
 
 window.onload = function() {
 
+    let backgroundPage = document.querySelector('img');
+
+    /*if(localStorage.getItem("dark")) {
+        document.body.classList.toggle('dark');
+       
+        
+        
+    } else {
+        if(localStorage.getItem("light"))
+        document.body.classList.toggle('light');
+        backgroundPage.src = "./assets/images/background-sign-light.png";
+       
+    }*/
+
+
+    if(!localStorage.getItem('mode')) {
+        principalStorage();
+      } else {
+        setLight();
+      }
+
+    
+
+      function principalStorage() {
+        localStorage.getItem('mode', 'dark');
+        document.body.classList.toggle('dark');
+        backgroundPage.src = "./assets/images/sign.svg";
+        
+        //setLight();
+      }
+
+      function setLight() {
+        document.body.classList.toggle('light');
+        backgroundPage.src = "./assets/images/background-sign-light.png";
+        
+      }
+
+//////////////////////////////////////////////////////////////
+
     let email = document.getElementById('email');
     email.addEventListener('change', verifEmail);
 
-
+   
 
     //*************************VERIFICATION FORMULAIRE SIGNIN POUR ENVOI
 

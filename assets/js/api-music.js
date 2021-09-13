@@ -2,6 +2,36 @@
 
 window.onload = function() {
 
+
+    
+    ////Light mode detection
+    let backgroundPage = document.querySelector('#dotsBackground');
+
+    if(!localStorage.getItem('mode')) {
+       principalStorage();
+     } else {
+       setLight();
+     }
+
+   
+
+     function principalStorage() {
+       localStorage.getItem('mode', 'dark');
+       document.body.classList.toggle('dark');
+       backgroundPage.src = "./assets/images/dotsv2.svg";
+       
+       //setLight();
+     }
+
+     function setLight() {
+       document.body.classList.toggle('light');
+       backgroundPage.src = "./assets/images/dots-light.svg";
+     }
+
+
+
+//////////////////////////////////////////////////////////////
+
     //charge les 20 derniers albums
     load_api_music();
     //charge les 8 albums récemment écoutés

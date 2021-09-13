@@ -6,6 +6,34 @@ let errorPwd = false;
 
 window.onload = function() {
 
+
+    let backgroundPage = document.querySelector('img');
+
+     if(!localStorage.getItem('mode')) {
+        principalStorage();
+      } else {
+        setLight();
+      }
+
+    
+
+      function principalStorage() {
+        localStorage.getItem('mode', 'dark');
+        document.body.classList.toggle('dark');
+        backgroundPage.src = "./assets/images/sign.svg";
+        
+        //setLight();
+      }
+
+      function setLight() {
+        document.body.classList.toggle('light');
+        backgroundPage.src = "./assets/images/background-sign-light.png";
+      }
+
+//////////////////////////////////////////////////////////////
+
+
+
     // variables qui ciblent les input
     // on leur affecte un ecouteur d'evenement
 

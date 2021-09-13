@@ -1,4 +1,34 @@
-//window.onload = function() {
+
+
+////Light mode detection
+
+
+if(!localStorage.getItem('mode')) {
+   principalStorage();
+ } else {
+   setLight();
+ }
+
+
+
+ function principalStorage() {
+   localStorage.getItem('mode', 'dark');
+   document.body.classList.toggle('dark');
+   
+   
+   //setLight();
+ }
+
+ function setLight() {
+   document.body.classList.toggle('light');
+   
+ }
+
+/////////////////////////////////////////////////////////////////////////
+
+
+
+
 
   let query = window.location.search // ?id=1025
   const params = new URLSearchParams(query); // ['id': 1205]
@@ -7,7 +37,7 @@
   loadalbumtracks(params.get("id")); // urlParams.get("id") -> 1205
  
 
-//}
+////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -207,6 +237,10 @@ function easterEgg(){
   cover.src = './assets/images/surprise.jpg';
   disc.src = './assets/music/newbrave.mp3';
   disc.play();
+  document.body.style.backgroundColor = "#B42B51";
+  timer.style.color = "white";
+  duration.style.color = "white";
+  
  }
   
 
@@ -291,14 +325,14 @@ fetch(url, { // fetch(newloc,
     .then(response => response.json())
   .then(album => {
     cover.src = album.picture
+        
   })
     
     
     disc.src = './assets/music/bensound-moose.mp3';
     title.textContent = coverAlbum.name;
     duration.textContent = timeTrack(coverAlbum.time);
-    albumName.textContent = "";
-    songs.push(coverAlbum);
+    albumName.textContent = '';
     disc.play();
       
     

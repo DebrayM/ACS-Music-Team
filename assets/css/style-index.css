@@ -1,19 +1,32 @@
 @media (max-width: 500px) {
+  :root {
+    --color-page-background: radial-gradient(#380e8b, #13012e);
+    --color-text: white;
+  }
+  .dark {
+    --color-page-background: radial-gradient(#380e8b, #13012e);
+    --color-text: white;
+  }
+  .light {
+    --color-page-background: radial-gradient(#FFF6D9, #584F72);
+    --color-text: #521765;
+  }
   * {
     margin: 0;
     padding: 0;
     border: none;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
+    -webkit-transition: all .15s ease;
+    transition: all .15s ease;
   }
-
   body {
-    background: radial-gradient(#380e8b, #13012e);
+    background: var(--color-page-background);
+    color: var(--color-text);
     background-attachment: fixed;
     height: 100%;
     position: relative;
     overflow: hidden;
   }
-
   #logo {
     width: 50%;
     height: auto;
@@ -21,26 +34,24 @@
     margin-top: -7vh;
     display: block;
   }
-
   #create_account {
     text-decoration: none;
-    color: white;
+    color: var(--color-text);
     display: block;
     margin-top: 68vh;
     margin-left: 32vw;
     position: absolute;
     z-index: 100;
   }
-
   #disc {
     width: 112%;
     height: auto;
     position: absolute;
-    transform: translateX(-6vw);
+    -webkit-transform: translateX(-6vw);
+            transform: translateX(-6vw);
     margin-top: 4.5vh;
     z-index: 10;
   }
-
   #arm {
     margin-left: 60vw;
     margin-top: -10vh;
@@ -49,8 +60,17 @@
     position: absolute;
     z-index: 100;
     opacity: 0.85;
+    -webkit-transition: -webkit-transform 2s;
+    transition: -webkit-transform 2s;
+    transition: transform 2s;
+    transition: transform 2s, -webkit-transform 2s;
+    -ms-touch-action: auto;
+        touch-action: auto;
   }
-
+  #arm:hover {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
   #signIn {
     text-decoration: none;
     text-transform: uppercase;
@@ -69,50 +89,74 @@
     font-size: 1em;
     line-height: 4em;
   }
-
   #ellipse {
     width: 130%;
     height: auto;
     position: absolute;
-    transform: translateX(-15vw);
+    -webkit-transform: translateX(-15vw);
+            transform: translateX(-15vw);
     margin-top: -0.5vh;
     z-index: 1;
   }
-
   #dots {
     width: 120%;
-    opacity: 0.41;
+    opacity: 0.30;
     height: auto;
     position: absolute;
-    transform: translateX(-20vw);
+    -webkit-transform: translateX(-20vw);
+            transform: translateX(-20vw);
     margin-top: 15vh;
     z-index: 3;
   }
-
   #right {
     border-bottom: 2px solid #ebdede;
     width: 34px;
     margin-top: 34vh;
     position: absolute;
-    transform: translateX(42.5vw);
+    -webkit-transform: translateX(42.5vw);
+            transform: translateX(42.5vw);
     z-index: 10;
   }
-
   #left {
     border-bottom: 2px solid #ebdede;
     width: 34px;
     margin-top: 38vh;
     position: absolute;
-    transform: translateX(52vw);
+    -webkit-transform: translateX(52vw);
+            transform: translateX(52vw);
     z-index: 100;
   }
-
   #account {
-    border-bottom: 2px solid #ebdede;
+    border-bottom: 1.9px solid var(--color-text);
     width: 34px;
     margin-top: 71vh;
     position: absolute;
-    transform: translateX(62vw);
+    -webkit-transform: translateX(62vw);
+            transform: translateX(62vw);
     z-index: 100;
   }
-}/*# sourceMappingURL=style-index.css.map */
+  .switch {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 500;
+    -webkit-transform: translateX(60vw);
+            transform: translateX(60vw);
+    opacity: 0.9;
+  }
+  #switch2 {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 400;
+    -webkit-transform: translateX(58.8vw);
+            transform: translateX(58.8vw);
+    margin-top: -0.8vh;
+    opacity: 0.4;
+  }
+}
+/*# sourceMappingURL=style-index.css.map */

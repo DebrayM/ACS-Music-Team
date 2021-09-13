@@ -1,3 +1,4 @@
+
 # ACS Music
 
 ## Durée du projet
@@ -33,5 +34,3 @@ https://writecode.fr/?technology=javascript -> Fiche mémo JavaScript
 https://www.sitepoint.com/get-url-parameters-with-javascript/ -> Passer des valeurs via une URL en JavaScript  
 https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage -> localStorage
 
-# Notes
-> :warning: **Attention ! Cet atelier n'utilise pas Node.js, donc faites attention lors de vos recherches que les articles que vous trouvez ne traite pas de ce sujet.**
